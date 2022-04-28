@@ -1,0 +1,15 @@
+from nvcr.io/nvidia/pytorch:22.02-py3
+
+COPY reproducibility/requirements.txt /opt/app/requirements.txt
+
+WORKDIR /opt/app
+
+RUN pip install -r requirements.txt && python -m laserembeddings download-models
+
+RUN python -c "from transformers import AutoTokenizer; AutoTokenizer.from_pretrained('sentence-transformers/LaBSE')"
+
+RUN python -c "from laserembeddings import Laser; Laser()"
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('LaBSE')"
+
+
+WORKDIR /workspace

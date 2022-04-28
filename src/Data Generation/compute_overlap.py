@@ -2,6 +2,7 @@
 
 from collections import Counter
 from transformers import AutoTokenizer
+import torch
 
 def getChars(sents: list) -> set:
   '''

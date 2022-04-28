@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-!python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps lang2vec
+#!python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps lang2vec
 import lang2vec.lang2vec as l2v
 import numpy as np
 from tqdm import tqdm
@@ -11,7 +11,7 @@ def cosine_similarity(u: np.ndarray, v: np.ndarray) -> float:
     v = v / np.linalg.norm(v)
     return u.dot(v)
 
-def getTypologicalDistances(iso_lookup: Dict[str], dist_type='geo') -> List[float]:
+def getTypologicalDistances(iso_lookup: Dict, dist_type='geo') -> List[float]:
   '''
   Compute geographic distances between languages using lang2vec
   dist_type: must be one of 'geo', 'syntax_knn', phonology_knn', 

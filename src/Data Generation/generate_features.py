@@ -465,7 +465,7 @@ if __name__=='__main__':
   '''
   print('Writing results to a CSV')
   df_dict = {'F1-score (LaBSE, Book of Matthew)': matthew_labse_f1,
-             'F1-score (LaBSE, Book of John'): john_labse_f1,
+             'F1-score (LaBSE, Book of John)': john_labse_f1,
              'F1-score (LASER, Book of Matthew)': matthew_laser_f1,
              'F1-score (LASER, Book of John)': john_laser_f1,
              'Avg. margin score (LaBSE, Book of Matthew)': matthew_labse_avg_margin,
