@@ -25,4 +25,4 @@ docker run --rm --ipc=host --gpus all -v ${PWD}:/workspace -it ${PROJECT_NAME}_i
 
 ### Useful tools
 - `unzip`: `unzip file_name`
-- `docker save --output hello-world.tar image_name`
+- `docker save --output ${PROJECT_NAME}_image.tar ${PROJECT_NAME}_image`
