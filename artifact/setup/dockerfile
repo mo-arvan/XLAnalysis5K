@@ -1,6 +1,6 @@
 from nvcr.io/nvidia/pytorch:22.02-py3
 
-COPY reproducibility/requirements.txt /opt/app/requirements.txt
+COPY artifact/setup/requirements.txt /opt/app/requirements.txt
 
 WORKDIR /opt/app
 
