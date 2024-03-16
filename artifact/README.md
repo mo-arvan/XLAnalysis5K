@@ -20,4 +20,4 @@ docker run --rm --gpus all -v ${PWD}:/workspace -it rep-xla bash
 . ./artifact/scripts/run.sh
 ```
 
-[output.log](artifact/results/output.log) contains the log of running the `generate_features.py` script. 
+[output.log](artifact/results/output.log) contains the log of running the `generate_features.py` script. This script should output the result of table 1 in the paper, but it fails due to a runtime error. This issue was reported on June 23rd, 2022 on [Github](https://github.com/AlexJonesNLP/XLAnalysis5K/issues/1).
