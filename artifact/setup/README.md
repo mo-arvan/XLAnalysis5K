@@ -14,15 +14,18 @@ Instructions for creating or organizing the artifacts of a given project.
 ### Docker
 ```bash
 
-docker build -t ${PROJECT_NAME}_image -f artifact/setup/dockerfile .
+docker build -t rep-xla -f artifact/setup/dockerfile .
 
 
-docker run --rm --ipc=host --gpus all -v ${PWD}:/workspace -it ${PROJECT_NAME}_image bash
+docker run --rm --gpus all -v ${PWD}:/workspace -it rep-xla bash
 
 # inside the container, run the required commands
 
 ```
 
 ### Useful tools
-- `unzip`: `unzip file_name`
-- `docker save --output ${PROJECT_NAME}_image.tar ${PROJECT_NAME}_image`
+
+```bash
+docker save --output rep-xla.tar rep-xla
+unzip file_name
+```

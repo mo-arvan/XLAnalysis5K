@@ -1,0 +1,491 @@
+docker run --rm --gpus all -v ${PWD}:/workspace -it rep-xla bash
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 22.02 (build 32255746)
+PyTorch Version 1.11.0a0+17540c5
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+Copyright (c) 2014-2022 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: MOFED driver for multi-node communication was not detected.
+      Multi-node communication performance may be reduced.
+
+root@2c9c3f7d17ef:/workspace# . ./artifact/scripts/run.sh 
+Archive:  Bible bitexts.zip
+   creating: Bible bitexts/
+  inflating: Bible bitexts/.DS_Store  
+   creating: __MACOSX/
+   creating: __MACOSX/Bible bitexts/
+  inflating: __MACOSX/Bible bitexts/._.DS_Store  
+   creating: Bible bitexts/book_of_john/
+  inflating: Bible bitexts/book_of_john/Czech.txt  
+   creating: __MACOSX/Bible bitexts/book_of_john/
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Czech.txt  
+  inflating: Bible bitexts/book_of_john/Gujarati-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Gujarati-NT.txt  
+  inflating: Bible bitexts/book_of_john/Quichua-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Quichua-NT.txt  
+  inflating: Bible bitexts/book_of_john/Farsi.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Farsi.txt  
+  inflating: Bible bitexts/book_of_john/Indonesian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Indonesian.txt  
+  inflating: Bible bitexts/book_of_john/German.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._German.txt  
+  inflating: Bible bitexts/book_of_john/Norwegian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Norwegian.txt  
+  inflating: Bible bitexts/book_of_john/Arabic.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Arabic.txt  
+  inflating: Bible bitexts/book_of_john/Japanese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Japanese.txt  
+  inflating: Bible bitexts/book_of_john/Serbian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Serbian.txt  
+  inflating: Bible bitexts/book_of_john/Amuzgo-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Amuzgo-NT.txt  
+  inflating: Bible bitexts/book_of_john/Malayalam.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Malayalam.txt  
+  inflating: Bible bitexts/book_of_john/Thai-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Thai-tok.txt  
+  inflating: Bible bitexts/book_of_john/Esperanto.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Esperanto.txt  
+  inflating: Bible bitexts/book_of_john/Wolof-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Wolof-NT.txt  
+  inflating: Bible bitexts/book_of_john/Campa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Campa-NT.txt  
+  inflating: Bible bitexts/book_of_john/Aukan-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Aukan-NT.txt  
+  inflating: Bible bitexts/book_of_john/Swedish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Swedish.txt  
+  inflating: Bible bitexts/book_of_john/Bulgarian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Bulgarian.txt  
+  inflating: Bible bitexts/book_of_john/Chinese-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Chinese-tok.txt  
+  inflating: Bible bitexts/book_of_john/Basque-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Basque-NT.txt  
+  inflating: Bible bitexts/book_of_john/Mam-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Mam-NT.txt  
+  inflating: Bible bitexts/book_of_john/Turkish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Turkish.txt  
+  inflating: Bible bitexts/book_of_john/Wolaytta-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Wolaytta-NT.txt  
+  inflating: Bible bitexts/book_of_john/English-WEB.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._English-WEB.txt  
+  inflating: Bible bitexts/book_of_john/Shuar-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Shuar-NT.txt  
+  inflating: Bible bitexts/book_of_john/Coptic-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Coptic-NT.txt  
+  inflating: Bible bitexts/book_of_john/Ukranian-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Ukranian-NT.txt  
+  inflating: Bible bitexts/book_of_john/Finnish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Finnish.txt  
+  inflating: Bible bitexts/book_of_john/Chinese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Chinese.txt  
+  inflating: Bible bitexts/book_of_john/Aguaruna-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Aguaruna-NT.txt  
+  inflating: Bible bitexts/book_of_john/Vietnamese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Vietnamese.txt  
+  inflating: Bible bitexts/book_of_john/Kannada.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Kannada.txt  
+  inflating: Bible bitexts/book_of_john/Lukpa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Lukpa-NT.txt  
+  inflating: Bible bitexts/book_of_john/Lithuanian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Lithuanian.txt  
+  inflating: Bible bitexts/book_of_john/Hindi.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Hindi.txt  
+  inflating: Bible bitexts/book_of_john/Somali.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Somali.txt  
+  inflating: Bible bitexts/book_of_john/Latvian-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Latvian-NT.txt  
+  inflating: Bible bitexts/book_of_john/Slovene.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Slovene.txt  
+  inflating: Bible bitexts/book_of_john/Russian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Russian.txt  
+  inflating: Bible bitexts/book_of_john/Syriac-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Syriac-NT.txt  
+  inflating: Bible bitexts/book_of_john/Danish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Danish.txt  
+  inflating: Bible bitexts/book_of_john/French.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._French.txt  
+  inflating: Bible bitexts/book_of_john/Nepali.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Nepali.txt  
+  inflating: Bible bitexts/book_of_john/Xhosa.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Xhosa.txt  
+  inflating: Bible bitexts/book_of_john/Japanese-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Japanese-tok.txt  
+  inflating: Bible bitexts/book_of_john/Maori.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Maori.txt  
+  inflating: Bible bitexts/book_of_john/Tagalog.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Tagalog.txt  
+  inflating: Bible bitexts/book_of_john/Camsa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Camsa-NT.txt  
+  inflating: Bible bitexts/book_of_john/K'iche'-NT-SIL.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._K'iche'-NT-SIL.txt  
+  inflating: Bible bitexts/book_of_john/K'iche'-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._K'iche'-NT.txt  
+  inflating: Bible bitexts/book_of_john/Uma-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Uma-NT.txt  
+  inflating: Bible bitexts/book_of_john/avg_margins.csv  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._avg_margins.csv  
+  inflating: Bible bitexts/book_of_john/Cebuano.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Cebuano.txt  
+  inflating: Bible bitexts/book_of_john/Achuar-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Achuar-NT.txt  
+  inflating: Bible bitexts/book_of_john/Zulu-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Zulu-NT.txt  
+  inflating: Bible bitexts/book_of_john/Dinka-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Dinka-NT.txt  
+  inflating: Bible bitexts/book_of_john/Cakchiquel-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Cakchiquel-NT.txt  
+  inflating: Bible bitexts/book_of_john/Cherokee-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Cherokee-NT.txt  
+  inflating: Bible bitexts/book_of_john/Shona.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Shona.txt  
+  inflating: Bible bitexts/book_of_john/Nahuatl-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Nahuatl-NT.txt  
+  inflating: Bible bitexts/book_of_john/Latin.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Latin.txt  
+  inflating: Bible bitexts/book_of_john/Zarma.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Zarma.txt  
+  inflating: Bible bitexts/book_of_john/Ojibwa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Ojibwa-NT.txt  
+  inflating: Bible bitexts/book_of_john/Ewe-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Ewe-NT.txt  
+  inflating: Bible bitexts/book_of_john/Q'eqchi'.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Q'eqchi'.txt  
+  inflating: Bible bitexts/book_of_john/English.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._English.txt  
+  inflating: Bible bitexts/book_of_john/Amharic.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Amharic.txt  
+  inflating: Bible bitexts/book_of_john/Swahili-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Swahili-NT.txt  
+  inflating: Bible bitexts/book_of_john/Cabecar-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Cabecar-NT.txt  
+  inflating: Bible bitexts/book_of_john/Albanian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Albanian.txt  
+  inflating: Bible bitexts/book_of_john/Romani-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Romani-NT.txt  
+  inflating: Bible bitexts/book_of_john/Afrikaans.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Afrikaans.txt  
+  inflating: Bible bitexts/book_of_john/Tachelhit-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Tachelhit-NT.txt  
+  inflating: Bible bitexts/book_of_john/Galela-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Galela-NT.txt  
+  inflating: Bible bitexts/book_of_john/Barasana-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Barasana-NT.txt  
+  inflating: Bible bitexts/book_of_john/Paite.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Paite.txt  
+  inflating: Bible bitexts/book_of_john/Uspanteco-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Uspanteco-NT.txt  
+  inflating: Bible bitexts/book_of_john/Icelandic.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Icelandic.txt  
+  inflating: Bible bitexts/book_of_john/Hungarian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Hungarian.txt  
+  inflating: Bible bitexts/book_of_john/Romanian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Romanian.txt  
+  inflating: Bible bitexts/book_of_john/Akawaio-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Akawaio-NT.txt  
+  inflating: Bible bitexts/book_of_john/Spanish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Spanish.txt  
+  inflating: Bible bitexts/book_of_john/Kabyle-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Kabyle-NT.txt  
+  inflating: Bible bitexts/book_of_john/Chinantec-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Chinantec-NT.txt  
+  inflating: Bible bitexts/book_of_john/Thai.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Thai.txt  
+  inflating: Bible bitexts/book_of_john/Greek.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Greek.txt  
+  inflating: Bible bitexts/book_of_john/Italian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Italian.txt  
+  inflating: Bible bitexts/book_of_john/Marathi.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Marathi.txt  
+  inflating: Bible bitexts/book_of_john/Myanmar.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Myanmar.txt  
+  inflating: Bible bitexts/book_of_john/Portuguese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Portuguese.txt  
+  inflating: Bible bitexts/book_of_john/Vietnamese-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Vietnamese-tok.txt  
+  inflating: Bible bitexts/book_of_john/Hebrew.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Hebrew.txt  
+  inflating: Bible bitexts/book_of_john/Jakalteko-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Jakalteko-NT.txt  
+  inflating: Bible bitexts/book_of_john/Dutch.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Dutch.txt  
+  inflating: Bible bitexts/book_of_john/Malagasy.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Malagasy.txt  
+  inflating: Bible bitexts/book_of_john/Korean.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Korean.txt  
+  inflating: Bible bitexts/book_of_john/Croatian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Croatian.txt  
+  inflating: Bible bitexts/book_of_john/Telugu.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Telugu.txt  
+  inflating: Bible bitexts/book_of_john/Slovak.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Slovak.txt  
+  inflating: Bible bitexts/book_of_john/Polish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Polish.txt  
+  inflating: Bible bitexts/book_of_john/Creole.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_john/._Creole.txt  
+   creating: Bible bitexts/book_of_matthew/
+  inflating: Bible bitexts/book_of_matthew/Czech.txt  
+   creating: __MACOSX/Bible bitexts/book_of_matthew/
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Czech.txt  
+  inflating: Bible bitexts/book_of_matthew/Gujarati-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Gujarati-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Quichua-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Quichua-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Farsi.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Farsi.txt  
+  inflating: Bible bitexts/book_of_matthew/Indonesian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Indonesian.txt  
+  inflating: Bible bitexts/book_of_matthew/German.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._German.txt  
+  inflating: Bible bitexts/book_of_matthew/Norwegian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Norwegian.txt  
+  inflating: Bible bitexts/book_of_matthew/Arabic.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Arabic.txt  
+  inflating: Bible bitexts/book_of_matthew/Japanese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Japanese.txt  
+  inflating: Bible bitexts/book_of_matthew/Serbian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Serbian.txt  
+  inflating: Bible bitexts/book_of_matthew/Amuzgo-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Amuzgo-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Malayalam.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Malayalam.txt  
+  inflating: Bible bitexts/book_of_matthew/Thai-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Thai-tok.txt  
+  inflating: Bible bitexts/book_of_matthew/Esperanto.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Esperanto.txt  
+  inflating: Bible bitexts/book_of_matthew/Wolof-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Wolof-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Campa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Campa-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Aukan-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Aukan-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Swedish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Swedish.txt  
+  inflating: Bible bitexts/book_of_matthew/Bulgarian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Bulgarian.txt  
+  inflating: Bible bitexts/book_of_matthew/Chinese-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Chinese-tok.txt  
+  inflating: Bible bitexts/book_of_matthew/Basque-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Basque-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Mam-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Mam-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Turkish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Turkish.txt  
+  inflating: Bible bitexts/book_of_matthew/Wolaytta-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Wolaytta-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/English-WEB.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._English-WEB.txt  
+  inflating: Bible bitexts/book_of_matthew/Shuar-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Shuar-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Coptic-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Coptic-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Ukranian-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Ukranian-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Finnish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Finnish.txt  
+  inflating: Bible bitexts/book_of_matthew/Chinese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Chinese.txt  
+  inflating: Bible bitexts/book_of_matthew/Aguaruna-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Aguaruna-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Vietnamese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Vietnamese.txt  
+  inflating: Bible bitexts/book_of_matthew/Kannada.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Kannada.txt  
+  inflating: Bible bitexts/book_of_matthew/Lukpa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Lukpa-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Lithuanian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Lithuanian.txt  
+  inflating: Bible bitexts/book_of_matthew/Hindi.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Hindi.txt  
+  inflating: Bible bitexts/book_of_matthew/Somali.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Somali.txt  
+  inflating: Bible bitexts/book_of_matthew/Latvian-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Latvian-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Slovene.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Slovene.txt  
+  inflating: Bible bitexts/book_of_matthew/Russian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Russian.txt  
+  inflating: Bible bitexts/book_of_matthew/Syriac-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Syriac-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Danish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Danish.txt  
+  inflating: Bible bitexts/book_of_matthew/French.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._French.txt  
+  inflating: Bible bitexts/book_of_matthew/Nepali.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Nepali.txt  
+  inflating: Bible bitexts/book_of_matthew/Xhosa.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Xhosa.txt  
+  inflating: Bible bitexts/book_of_matthew/Japanese-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Japanese-tok.txt  
+  inflating: Bible bitexts/book_of_matthew/Maori.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Maori.txt  
+  inflating: Bible bitexts/book_of_matthew/Tagalog.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Tagalog.txt  
+  inflating: Bible bitexts/book_of_matthew/Camsa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Camsa-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/K'iche'-NT-SIL.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._K'iche'-NT-SIL.txt  
+  inflating: Bible bitexts/book_of_matthew/K'iche'-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._K'iche'-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Uma-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Uma-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Cebuano.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Cebuano.txt  
+  inflating: Bible bitexts/book_of_matthew/Achuar-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Achuar-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Zulu-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Zulu-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Dinka-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Dinka-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Cakchiquel-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Cakchiquel-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Cherokee-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Cherokee-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Shona.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Shona.txt  
+  inflating: Bible bitexts/book_of_matthew/Nahuatl-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Nahuatl-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Latin.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Latin.txt  
+  inflating: Bible bitexts/book_of_matthew/Zarma.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Zarma.txt  
+  inflating: Bible bitexts/book_of_matthew/Ojibwa-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Ojibwa-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Ewe-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Ewe-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Q'eqchi'.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Q'eqchi'.txt  
+  inflating: Bible bitexts/book_of_matthew/English.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._English.txt  
+  inflating: Bible bitexts/book_of_matthew/Amharic.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Amharic.txt  
+  inflating: Bible bitexts/book_of_matthew/Swahili-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Swahili-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Cabecar-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Cabecar-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Albanian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Albanian.txt  
+  inflating: Bible bitexts/book_of_matthew/Romani-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Romani-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Afrikaans.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Afrikaans.txt  
+  inflating: Bible bitexts/book_of_matthew/Tachelhit-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Tachelhit-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Galela-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Galela-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Barasana-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Barasana-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Paite.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Paite.txt  
+  inflating: Bible bitexts/book_of_matthew/Uspanteco-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Uspanteco-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Icelandic.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Icelandic.txt  
+  inflating: Bible bitexts/book_of_matthew/Hungarian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Hungarian.txt  
+  inflating: Bible bitexts/book_of_matthew/Romanian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Romanian.txt  
+  inflating: Bible bitexts/book_of_matthew/Akawaio-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Akawaio-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Spanish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Spanish.txt  
+  inflating: Bible bitexts/book_of_matthew/Kabyle-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Kabyle-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Chinantec-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Chinantec-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Thai.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Thai.txt  
+  inflating: Bible bitexts/book_of_matthew/Greek.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Greek.txt  
+  inflating: Bible bitexts/book_of_matthew/Italian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Italian.txt  
+  inflating: Bible bitexts/book_of_matthew/Marathi.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Marathi.txt  
+  inflating: Bible bitexts/book_of_matthew/Myanmar.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Myanmar.txt  
+  inflating: Bible bitexts/book_of_matthew/Portuguese.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Portuguese.txt  
+  inflating: Bible bitexts/book_of_matthew/Vietnamese-tok.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Vietnamese-tok.txt  
+  inflating: Bible bitexts/book_of_matthew/Hebrew.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Hebrew.txt  
+  inflating: Bible bitexts/book_of_matthew/Jakalteko-NT.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Jakalteko-NT.txt  
+  inflating: Bible bitexts/book_of_matthew/Dutch.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Dutch.txt  
+  inflating: Bible bitexts/book_of_matthew/Malagasy.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Malagasy.txt  
+  inflating: Bible bitexts/book_of_matthew/Korean.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Korean.txt  
+  inflating: Bible bitexts/book_of_matthew/Croatian.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Croatian.txt  
+  inflating: Bible bitexts/book_of_matthew/Telugu.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Telugu.txt  
+  inflating: Bible bitexts/book_of_matthew/Slovak.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Slovak.txt  
+  inflating: Bible bitexts/book_of_matthew/Polish.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Polish.txt  
+  inflating: Bible bitexts/book_of_matthew/Creole.txt  
+  inflating: __MACOSX/Bible bitexts/book_of_matthew/._Creole.txt  
+Using GPU (recommended): NVIDIA GeForce RTX 3090
+Using GPU for LASER embeddings
+Reading Bible texts
+Book of Matthew . . .
+Reading in texts . . .
+. . . and Book of John
+Reading in texts . . .
+Generating LaBSE embeddings
+Getting LaBSE embeddings . . .
+100%|████████████████████████████████████████████████████| 101/101 [01:26<00:00,  1.17it/s]
+Getting LaBSE embeddings . . .
+100%|████████████████████████████████████████████████████| 102/102 [01:07<00:00,  1.51it/s]
+Generating LASER embeddings
+Getting LASER embeddings . . .
+100%|████████████████████████████████████████████████████| 101/101 [01:01<00:00,  1.64it/s]
+Getting LASER embeddings . . .
+100%|████████████████████████████████████████████████████| 101/101 [00:51<00:00,  1.97it/s]
+Performing bitext retrieval . . .
+Bitext retrieval: Book of Matthew (LaBSE)
+5050it [1:05:03,  1.29it/s]
+Bitext retrieval: Book of John (LaBSE)
+5151it [50:56,  1.69it/s]
+Bitext retrieval: Book of Matthew (LASER)
+5050it [50:36,  1.66it/s]
+Bitext retrieval: Book of John (LASER)
+5050it [47:43,  1.76it/s]
+Bitext retrieval complete
+Time taken: 12861.25 seconds
+Computing of average margin scores . . .
+Average margin scores: Book of Matthew (LaBSE)
+5050it [43:00,  1.96it/s]
+Average margin scores: Book of John (LaBSE)
+4655it [38:57,  2.02it/s]Traceback (most recent call last):
+  File "src/Data Generation/generate_features.py", line 351, in <module>
+    john_labse_avg_margin = [mineSentencePairs(x,y,average=True) for x,y in 
+  File "src/Data Generation/generate_features.py", line 351, in <listcomp>
+    john_labse_avg_margin = [mineSentencePairs(x,y,average=True) for x,y in 
+  File "/workspace/src/Data Generation/bitext_retrieval.py", line 131, in mineSentencePairs
+    aligned_margin = (src_embs[i].dot(tgt_embs[i])) / np.average((fwd_means[i], bwd_means[i]))
+IndexError: index 879 is out of bounds for axis 0 with size 879
+4655it [38:57,  1.99it/s]
