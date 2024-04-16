@@ -1,0 +1,42 @@
+Using GPU (recommended): NVIDIA GeForce RTX 2080 Ti
+Using GPU for LASER embeddings
+Reading Bible texts
+Book of Matthew . . .
+Reading in texts . . .
+. . . and Book of John
+Reading in texts . . .
+Generating LaBSE embeddings
+Getting LaBSE embeddings . . .
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 101/101 [01:58<00:00,  1.17s/it]
+Getting LaBSE embeddings . . .
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 102/102 [01:41<00:00,  1.01it/s]
+Generating LASER embeddings
+Getting LASER embeddings . . .
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 101/101 [01:29<00:00,  1.13it/s]
+Getting LASER embeddings . . .
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 101/101 [01:13<00:00,  1.38it/s]
+Performing bitext retrieval . . .
+Bitext retrieval: Book of Matthew (LaBSE)
+5050it [33:48,  2.49it/s]
+Bitext retrieval: Book of John (LaBSE)
+5151it [31:46,  2.70it/s]
+Bitext retrieval: Book of Matthew (LASER)
+5050it [34:00,  2.48it/s]
+Bitext retrieval: Book of John (LASER)
+5050it [32:55,  2.56it/s]
+Bitext retrieval complete
+Time taken: 7950.39 seconds
+Computing of average margin scores . . .
+Average margin scores: Book of Matthew (LaBSE)
+5050it [25:40,  3.28it/s]
+Average margin scores: Book of John (LaBSE)
+4898it [23:45,  3.49it/s]Traceback (most recent call last):
+  File "src/Data Generation/generate_features.py", line 351, in <module>
+    john_labse_avg_margin = [mineSentencePairs(x,y,average=True) for x,y in
+  File "src/Data Generation/generate_features.py", line 351, in <listcomp>
+    john_labse_avg_margin = [mineSentencePairs(x,y,average=True) for x,y in
+  File "/workspace/src/Data Generation/bitext_retrieval.py", line 131, in mineSentencePairs
+    aligned_margin = (src_embs[i].dot(tgt_embs[i])) / np.average((fwd_means[i], bwd_means[i]))
+IndexError: index 879 is out of bounds for axis 0 with size 879
+4898it [23:45,  3.44it/s]
+
